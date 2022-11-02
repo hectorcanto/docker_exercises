@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+  example:
+    image: python:slim-buster
+    container_name: compose2_example
+    environment:
+      FOO: 'BAR'
+    entrypoint: ""
+    working_dir: /opt/app
+    command: "python example.py"
+    volumes:
+      - ./src:/opt/app
