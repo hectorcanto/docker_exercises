@@ -6,3 +6,4 @@ docker logs zen_taussig
 docker inspect zen_taussig | jq ".[0].Config"
 docker stats --no-stream zen_taussig
 docker exec -ti zen_taussig bash
+docker history postgres:latest

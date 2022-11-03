@@ -2,7 +2,7 @@
 - Image Size: 377MB 
 - Container Name: zen_taussig
 - Container ID: 02fad8764f71bafda54276de6d774f49469292ca7278c68900f3b0f3d3fd8afa
-- Exposed port: 
+- Exposed port: 5432
 - Postgres version: 15.0
 - Data Volume (aka PGDATA): /var/lib/postgresql/data
 - default entrypoint: docker-entrypoint.sh
