@@ -1,4 +1,4 @@
-docker pull
+docker pull postgres:latest
 docker run -d -e POSTGRES_PASSWORD=abc123. postgres:latest
 docker image ls postgres:latest
 docker ps -a
