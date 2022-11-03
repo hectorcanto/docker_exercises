@@ -1,11 +1,11 @@
 
-- Image Size: 
-- Container Name: 
-- Container ID: 
+- Image Size: 377MB 
+- Container Name: zen_taussig
+- Container ID: 02fad8764f71bafda54276de6d774f49469292ca7278c68900f3b0f3d3fd8afa
 - Exposed port: 
-- Postgres version: 
-- Data Volume (aka PGDATA): 
-- default entrypoint: 
-- default command: 
-- baseline consumption : CPU ___% MEM ___MB  
-- OS: Distro Version Codename (Ubuntu 22.04 jammy)
+- Postgres version: 15.0
+- Data Volume (aka PGDATA): /var/lib/postgresql/data
+- default entrypoint: docker-entrypoint.sh
+- default command: postgres
+- baseline consumption : CPU 0.01% MEM 32.5MB  
+- OS: Debian GNU/Linux 11 (bullseye)
