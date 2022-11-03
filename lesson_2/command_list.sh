@@ -8,3 +8,7 @@ docker inspect $container_name/$image_name
 docker stop
 docker restart
 docker kill
+docker container create
+docker container port
+docker container pause/unpause
+...
