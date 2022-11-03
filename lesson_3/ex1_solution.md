@@ -4,7 +4,7 @@
 - Exposed port: 5432
 - Postgres version: 15.0-1.pgdg110+1
 - Data Volume (aka PGDATA): /var/lib/postgresql/data
-- default entrypoint: docker-entrypoint.sh"
+- default entrypoint: docker-entrypoint.sh
 - default command: postgres
 - baseline consumption : CPU 0% MEM 31.44MB
 - OS: Debian GNU/Linux 11 (bullseye)
