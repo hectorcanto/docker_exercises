@@ -1,11 +1,11 @@
 
-- Image Size: 
-- Container Name: 
-- Container ID: 
-- Exposed port: 
-- Postgres version: 
-- Data Volume (aka PGDATA): 
-- default entrypoint: 
-- default command: 
-- baseline consumption : CPU ___% MEM ___MB  
-- OS: Distro Version Codename (Ubuntu 22.04 jammy)
+- Image Size: 377Mb
+- Container Name: festive_heisenberg
+- Container ID: a09e501aa7d9
+- Exposed port: 5432
+- Postgres version: 15.0
+- Data Volume (aka PGDATA): /var/lib/postgresql/data
+- default entrypoint: docker-entrypoint.sh
+- default command:  ["/bin/sh","-c","#(nop) ", "CMD [\"postgres\"]"]
+- baseline consumption : CPU 0.00% MEM 940KiB  
+- OS: Debian 15.0-1.pgdg110+1
