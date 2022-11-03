@@ -4,7 +4,7 @@
 - Container ID: 0f06f80f04ca
 - Exposed port: 5432/tcp
 - Postgres version: 15.0-1.pgdg110+1
-- Data Volume (aka PGDATA): 
+- Data Volume (aka PGDATA): "/var/lib/postgresql/data"
 - default entrypoint: "docker-entrypoint.sh"
 - default command: "/bin/sh",
 - baseline consumption : CPU 0.00% MEM 31.7MB  
