@@ -1,11 +1,11 @@
 
-- Image Size: 
-- Container Name: 
-- Container ID: 
-- Exposed port: 
-- Postgres version: 
-- Data Volume (aka PGDATA): 
-- default entrypoint: 
-- default command: 
-- baseline consumption : CPU ___% MEM ___MB  
-- OS: Distro Version Codename (Ubuntu 22.04 jammy)
+- Image Size: 377MB
+- Container Name: trusting_murdock
+- Container ID: 3c8d719dfb2d
+- Exposed port: 5432/tcp
+- Postgres version: ???????
+- Data Volume (aka PGDATA): "/var/lib/postgresql/data"
+- default entrypoint: docker-entrypoint.sh
+- default command: "/bin/sh","-c","#(nop) ","CMD [\"postgres\"]"
+- baseline consumption : CPU 0.0% MEM 30.21MB  
+- OS: Distro Version Codename (Ubuntu 22.04 jammy)?????
