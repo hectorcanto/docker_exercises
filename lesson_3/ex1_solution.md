@@ -1,11 +1,11 @@
 
-- Image Size: 
-- Container Name: 
-- Container ID: 
-- Exposed port: 
-- Postgres version: 
-- Data Volume (aka PGDATA): 
-- default entrypoint: 
-- default command: 
-- baseline consumption : CPU ___% MEM ___MB  
-- OS: Distro Version Codename (Ubuntu 22.04 jammy)
+- Image Size: 279MB
+- Container Name: bitnami-postgresql
+- Container ID: e6d5e05fc0cc513041ff9deebd7ae7e8922bcbff1db7509d22e18455485d488b
+- Exposed port: 5432
+- Postgres version: 15.0.0
+- Data Volume (aka PGDATA): /bitnami/postgresql
+- default entrypoint: "/opt/bitnami/scripts/postgresql/entrypoint.sh"
+- default command: "/opt/bitnami/scripts/postgresql/run.sh"
+- baseline consumption : CPU 0.00% MEM 30.66MiB
+- OS: Debian GNU/Linux 11 (bullseye)
