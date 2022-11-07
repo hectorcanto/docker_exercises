@@ -14,18 +14,18 @@ Use a non-Alpine version.
 
 Run the container with the exposed port published to a port in your host (f.i. 8011)
 Check the web present in the given port (localhost/0.0.0.0) and copy the content
-in [](ex1_solution.md) Part 1
+in `ex1_solution.md` Part 1
 
 **Part2**
 
 Now, you need to replace the nginx configuration to show another web in another port. For this
 you need to:
-- go inside the container and copy `/etc/nginx/nginx.conf` to [](ex.conf)
-- use the snippet at [](src/nginx.conf) to include it INSIDE the html section
-- paste everything together in [](ex1.conf)
+- go inside the container and copy `/etc/nginx/nginx.conf` to `ex1.conf`
+- use the snippet at `src/nginx.conf` to include it INSIDE the html section
+- paste everything together in `ex1.conf`
 - use a volume to replace your ex1.conf into `/etc/nginx.nginx.conf` inside the container
 - mount the file ex1_web.html into the right file at `/var/www/` inside the container
-
+- launch the container again and copy the content of localhost:8888 in `ex1_solution.md`
 
 **Part 3**
 
