@@ -7,5 +7,5 @@
 - Data Volume (aka PGDATA): 
 - default entrypoint: 
 - default command: 
-- baseline consumption :CPU ___% MEM ___MB 
+- baseline consumption : CPU ___% MEM ___MB  
 - OS: Distro Version Codename (Ubuntu 22.04 jammy)
