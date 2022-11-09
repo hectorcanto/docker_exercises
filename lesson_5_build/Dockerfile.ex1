@@ -1,0 +1,12 @@
+FROM
+
+LABEL
+ENV
+EXPOSE
+
+ADD
+COPY
+RUN
+
+
+
