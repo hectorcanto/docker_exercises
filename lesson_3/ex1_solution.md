@@ -1,11 +1,11 @@
 
-- Image Size: 377MB
-- Container Name: some-postgres
-- Container ID: 0f06f80f04ca
-- Exposed port: 5432/tcp
-- Postgres version: 15.0-1.pgdg110+1
-- Data Volume (aka PGDATA): "/var/lib/postgresql/data"
-- default entrypoint: "docker-entrypoint.sh"
-- default command: "/bin/sh",
-- baseline consumption : CPU 0.00% MEM 31.7MB  
+- Image Size: 
+- Container Name: 
+- Container ID: 
+- Exposed port: 
+- Postgres version: 
+- Data Volume (aka PGDATA): 
+- default entrypoint: 
+- default command: 
+- baseline consumption :CPU ___% MEM ___MB 
 - OS: Distro Version Codename (Ubuntu 22.04 jammy)
