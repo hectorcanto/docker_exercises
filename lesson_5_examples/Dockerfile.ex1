@@ -1,0 +1,13 @@
+FROM ubuntu:latest
+
+LABEL project=docker-course
+
+RUN mkdir -p /etc/apt/keyrings && apt-get update && apt-get -y install curl gpg jq && \
+    curl -fsSL https://repo.charm.sh/apt/gpg.key | gpg --dearmor -o /etc/apt/keyrings/charm.gpg && \
+    echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | tee /etc/apt/sources.list.d/charm.list && \
+    apt-get update && apt-get -y install glow && useradd -ms /bin/bash newuser
+
+ADD README.md $HOME/HELP.md
+USER newuser
+WORKDIR /home/newuser
+COPY example.json .
