@@ -1,0 +1,13 @@
+```
+FROM ubuntu:20.04
+
+RUN apt-get update
+RUN apt-get install -y gcc build-essential
+
+WORKDIR /root
+COPY hello.zip .
+# hello.zip has README.md and hello.c inside
+RUN unzip hello.zip
+RUN gcc -o helloworld hello.c
+CMD ["./helloworld"]
+```
