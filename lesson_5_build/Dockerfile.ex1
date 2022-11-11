@@ -1,12 +1,35 @@
-FROM
+# ARGs can be used to pass build time arguments, they are on docker history available, don't use for secrets
+ARG NGINX_VERSION=1.21.1
 
-LABEL
-ENV
-EXPOSE
+# Can add --platform=$BUILDPLATFORM if using BuildKit in order to detect the build platform and use it
+FROM nginx:${NGINX_VERSION} AS l5ex1
 
-ADD
-COPY
-RUN
+# Using the MAINTAINER just to try it, better use a LABEL maintainer
+MAINTAINER "J.L."
+LABEL maintainer="J.L."
+LABEL com.imatia.project="docker-course" \
+      author="J.L."
 
+# ENVs are persisted into the containers
+ENV LESSON_NUMBER="5" \
+    EXERCISE_NUMBER="1"
 
+# Using COPY in favor of ADD because it is lighter (No tar extraction and no URL support)
+# We can change ownerships with --chown=1001:1001 into the COPY or using RUN chown on the files/directories
+# Set working directory with WORKDIR if needed (Remember it will keep the location when the container runs)
+COPY src/ex1.conf /etc/nginx/nginx.conf
+COPY src/ex1_web.html /var/www/index.html
 
+# Exposed ports
+EXPOSE 80 8888
+
+# Run whatever you need, just a test here
+RUN echo "Useless layer just to test the RUN command! :)"
+
+# Set the container to be run as a non-root user because it's a good practise
+# We won't be doing it here because it won't work, further investigation needed
+# USER 1001
+
+# Set a healthcheck to check the status of the running container
+# Other options are also good like "nc -nz localhost 80 || exit 1" or "wget"
+HEALTHCHECK --interval=15s --timeout=3s CMD curl --fail http://localhost:80/ || exit 1
