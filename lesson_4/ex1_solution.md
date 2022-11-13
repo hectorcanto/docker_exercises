@@ -26,6 +26,27 @@ Commercial support is available at
 
 ### Part 2
 
+<!DOCTYPE html>
+<title>Text Example</title>
+<style>
+div.container {
+background-color: #ffffff;
+}
+div.container p {
+font-family: Arial;
+font-size: 14px;
+font-style: normal;
+font-weight: normal;
+text-decoration: none;
+text-transform: none;
+color: #000000;
+background-color: #ffffff;
+}
+</style>
+
+<div class="container">
+<p>Docker course lesson 4</p>
+
 ### Part 3 logs
 
 ### Part 4 status
