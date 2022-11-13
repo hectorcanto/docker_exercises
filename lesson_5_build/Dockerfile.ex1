@@ -1,12 +1,10 @@
-FROM
+FROM nginx:1.21.1 
 
-LABEL
-ENV
-EXPOSE
+LABEL Author="AIM"
+ENV LESSON=5
+EXPOSE 80/tcp
+EXPOSE 8888/tcp
 
-ADD
-COPY
-RUN
-
-
-
+ADD src/ex1.conf /etc/nginx/nginx.conf
+COPY /src/ex1_web.html /var/www/index.html 
+RUN echo "LESSON ${LESSON}, ex1"

@@ -1,2 +1,2 @@
-REPOSITORY   TAG             IMAGE ID       CREATED       SIZE
+REPOSITORY   TAG                  IMAGE ID       CREATED         SIZE
 nginx

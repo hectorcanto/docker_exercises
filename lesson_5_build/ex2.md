@@ -11,3 +11,6 @@ Edit the Dockerfile and/or write below your thoughts. Open a pull request with y
 
 ### Your changes
 
+1. **To make it smaller**: I cleaned up the cache of apt-get. I thought to use a smaller base image but it seems is not availble.
+2. **To have less layer**: I use the `&&` operator to join commands from diferents lines.
+3. **To enhance document**: I added a label.
