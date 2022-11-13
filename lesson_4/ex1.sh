@@ -10,3 +10,4 @@ docker run -p 8888:8888 -d -v nginx:/etc/nginx/ -v /home/agoitia/curso_docker/do
 curl localhost:8888
 sudo tail -f /var/lib/docker/containers/2d7f736dca83e1d54aef4252dbf186a678a73ee13c8d06044633181b3106afa4/2d7f736dca83e1d54aef4252dbf186a678a73ee13c8d06044633181b3106afa4-json.log
 docker stop nginx1221
+docker ps -a

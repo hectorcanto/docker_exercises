@@ -116,6 +116,6 @@ root@MSI:/var/lib/docker/containers/2d7f736dca83e1d54aef4252dbf186a678a73ee13c8d
 
 ### Part 4 status
 
-Name
-Status
-Exit code
+Name nginx1221
+Status Exited (0) 3 minutes ago
+Exit code 0
