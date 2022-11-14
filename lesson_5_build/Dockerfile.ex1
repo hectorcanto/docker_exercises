@@ -1,12 +1,10 @@
-FROM
+FROM nginx:1.22.1
 
-LABEL
-ENV
-EXPOSE
+LABEL author="German Rodriguez"
+ENV LESSON_NUMBER=5
+EXPOSE 8888/tcp
 
-ADD
-COPY
-RUN
-
+ADD src/ex1.conf /etc/nginx/nginx.conf
+COPY src/ex1_web.html /var/www/index.html
 
 
