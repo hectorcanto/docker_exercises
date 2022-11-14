@@ -1,12 +1,11 @@
-FROM
+FROM nginx:1.22.1
 
-LABEL
-ENV
-EXPOSE
+LABEL author=DO
+ENV LESSON_NUMBER=5
 
-ADD
-COPY
-RUN
+COPY src/ex1.conf /etc/nginx/nginx.conf
+ADD src/ex1_web.html /var/www/index.html
 
+EXPOSE 80 8888
 
-
+RUN echo "Whatever"
