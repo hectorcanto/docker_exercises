@@ -12,7 +12,7 @@ Edit the Dockerfile and/or write below your thoughts. Open a pull request with y
 
 The changes I did were:
 
-1. (Fix) Removed the unknown ``` starting and closing instructions because they don't exist (And I guess they are just part of Markdown for this exercise or something).
+1. (Fix) Removed the unknown \`\`\` starting and closing instructions because they don't exist (And I guess they are just part of Markdown for this exercise or something).
 2. (Fix) Remove the comment and create the dummy ZIP missing in order to check the size of the built image.
 3. (Fix) Add to the RUN apt-get install a new argument to install `unzip` because it is needed.
 4. (Verify) Build the image and check the starting point.
