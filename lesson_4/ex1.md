@@ -24,7 +24,7 @@ Copy the content in `ex1_solution.md` Part 1
 Now, you need to replace the nginx configuration to show another web in another port. For this
 you need to:
 - go inside the container and copy `/etc/nginx/nginx.conf` to `ex1.conf`
-- use the snippet at `src/nginx.conf` to include it INSIDE the html section
+- use the snippet at `src/nginx.conf` to include it INSIDE the http section
 - paste everything together in `ex1.conf`
 - use a volume to replace your ex1.conf into `/etc/nginx.nginx.conf` inside the container
 - mount the file ex1_web.html into the right file at `/var/www/` inside the container
