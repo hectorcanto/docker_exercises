@@ -1,13 +1,12 @@
-```
 FROM ubuntu:20.04
 
-RUN apt-get update
-RUN apt-get install -y gcc build-essential
+LABEL project="optimised file"
+
+RUN apt-get update && apt-get install -y gcc build-essential && \
+    apt-get autoclean
 
 WORKDIR /root
 COPY hello.zip .
 # hello.zip has README.md and hello.c inside
-RUN unzip hello.zip
-RUN gcc -o helloworld hello.c
+RUN unzip hello.zip && gcc -o helloworld hello.c
 CMD ["./helloworld"]
-```
