@@ -1,5 +1,5 @@
 Build a modification of the Nginx image with the additions we set in the exercise of Lesson 3:
-- 
+
 - Complete the Dockerfile.ex1
   - Add a label with author as your initials
   - Add an environmental variable with the lesson number (5)

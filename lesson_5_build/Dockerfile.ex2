@@ -1,13 +1,26 @@
-```
-FROM ubuntu:20.04
+ARG ALPINE_VERSION=3.16.3
+FROM alpine:${ALPINE_VERSION} AS l5ex2
 
-RUN apt-get update
-RUN apt-get install -y gcc build-essential
+LABEL description="J.L. - Lesson 5 Exercise 2 for docker-course. Minimizing a dockerfile."
 
-WORKDIR /root
-COPY hello.zip .
-# hello.zip has README.md and hello.c inside
-RUN unzip hello.zip
-RUN gcc -o helloworld hello.c
-CMD ["./helloworld"]
-```
+# Copy required dependencies.
+COPY hello.zip ./root
+
+# Run APK update and install C compiler
+# Unzip required dependencies
+# Compile the program
+# Remove the temporary files leaving the compiled program
+# Remove the C compiler
+RUN apk update --no-cache --purge \
+    && apk add --no-cache --purge gcc musl-dev \
+    && unzip ./root/hello.zip -d ./root \
+    && gcc -o ./root/helloworld ./root/hello.c \
+    && rm ./root/hello.zip \
+    && rm ./root/README.md \
+    && rm ./root/hello.c \
+    && apk del --no-cache --purge -r gcc musl-dev
+
+# Add route to path
+ENV PATH=$PATH:/root
+
+CMD ["/bin/sh", "-c", "helloworld"]
