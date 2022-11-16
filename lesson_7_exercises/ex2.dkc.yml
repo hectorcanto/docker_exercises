@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  ex2-mariadb:
+    image: mariadb:jammy
+    labels:
+      maintainer: "J.L."
+      author: "J.L."
+      test: ${ENV_TEST}
+      com.imatia.project: "docker-course"
+    env_file: 
+      # - ./.env # Read the comments inside .env file for more info about leaving this line uncommented
+      - ./.emariadb.env # Will only inject container scoped env variables
+    environment:
+      MARIADB_USER: "mariadb" # You can still define environment variables even with a .env file defined
+    volumes:
+      - ./mariadb:/var/lib/mysql # Mount a volume for the DB data
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      interval: 15s
+      timeout: 3s
