@@ -11,3 +11,24 @@ RUN unzip hello.zip
 RUN gcc -o helloworld hello.c
 CMD ["./helloworld"]
 ```
+
+
+
+FROM nginx:1.22.1-alpine
+
+# ADD Info labels
+LABEL author="German Rodriguez"
+LABEL description="Ex2. Optimizing image"
+
+# Set environment variable
+ENV LESSON_NUMBER=5
+
+# Ports exposed
+EXPOSE 8888/tcp 80/tcp
+
+# Copy the configuration file and html file
+ADD src/ex1.conf /etc/nginx/nginx.conf
+COPY src/ex1_web.html /var/www/index.html
+
+
+Started from alpine nginx instead of normal tagged has reduced image size from 142mb to 23.6mb:
