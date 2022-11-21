@@ -1,0 +1,6 @@
+version: "3.9"
+services:
+  proxy:
+    image: nginx:alpine
+    ports:
+      - "8124:80"
