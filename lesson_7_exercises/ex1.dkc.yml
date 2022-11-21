@@ -1,3 +1,9 @@
-sevices:
-   your_service:
-
+services:
+   l7_ex1:
+      image: nginx:1.22.1
+      volumes:
+         - ./ex1.conf:/etc/nginx/nginx.conf
+         - ./ex1_web.html:/var/www/index.html
+      ports:
+         - '8011:80'
+         - '8012:8888'

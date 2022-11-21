@@ -1,0 +1,4 @@
+services:
+   l7_ex1:
+      image: mariadb:10.9.4
+      env_file: ex2.env
