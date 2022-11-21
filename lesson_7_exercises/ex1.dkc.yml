@@ -1,3 +1,11 @@
-sevices:
-   your_service:
+version: "1"
 
+services:
+  db:
+    image: ngx
+    ports:
+     - "8011:80"
+     - "80:8888"
+    volumes:
+      - "./config/ex1.conf:/etc/nginx/nginx.conf "
+      - "./view/ex1_web.html:/var/www/index.html"
