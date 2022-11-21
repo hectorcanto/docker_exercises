@@ -11,3 +11,6 @@ Edit the Dockerfile and/or write below your thoughts. Open a pull request with y
 
 ### Your changes
 
+- Combine lines 4 and 5
+- Replace line 8 with **ADD hello.zip**
+- Remove line 10
