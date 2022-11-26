@@ -1,11 +1,9 @@
+
 services:
   proxy:
     image: nginx:latest
-    deploy:
-      replicas: 1
     secrets:
       - new_secret
-      - other_secret
 
 secrets:
   new_secret:
